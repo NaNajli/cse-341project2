@@ -47,7 +47,7 @@ const getAll = async (req ,res )=>
         
         const updateRoom = async(req ,res )=>
             {   // #swagger.tags =['Rooms']  
-                const roomtId = new ObjebtId (req.params.id)
+                const roomId = new ObjebtId (req.params.id)
                 const room = {
                     room : req.body.room,
                     persons : req.body.persons,
@@ -70,7 +70,7 @@ const getAll = async (req ,res )=>
          
             const deleteRoom = async(req ,res )=>
                 {   // #swagger.tags =['Rooms']  
-                    const roomtId = new ObjebtId (req.params.id)
+                    const roomId = new ObjebtId (req.params.id)
                     const room = {
                         room : req.body.room,
                         persons : req.body.persons,
