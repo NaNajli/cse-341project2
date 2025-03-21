@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/NaNajli/cse-341project2#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-validator": "^7.2.1",
     "mongobd": "^0.0.1-security.0",
     "mongodb": "^6.14.2",
     "swagger-ui-express": "^5.0.1"

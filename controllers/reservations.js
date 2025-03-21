@@ -1,6 +1,7 @@
 const mongodb = require('../data/database');
 //this is the unique object ID that mongo assigns to all this databases entries
 const ObjebtId = require('mongodb').ObjectId;
+const reservValidation = require('../utilities/validation')
 
 const getAll = async (req ,res )=>
     {
@@ -9,6 +10,7 @@ const getAll = async (req ,res )=>
     result.toArray().then((reservations) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(reservations);
+
         
 
     })}
@@ -24,15 +26,15 @@ const getAll = async (req ,res )=>
         
             })};
 
-    const createReservations = async(req ,res )=>
+    const createReservations = async(req ,res)=>
         {   // #swagger.tags =['Reservations']  
             const reservation = {               
             reservation_id : req.body.reservation_id,
             reservation_date : req.body.reservation_date,
             first_name : req.body.first_name,
             last_name : req.body.last_name,
-
             };
+            
             const response = await mongodb.getDatabase().db().collection('reservations').insertOne(reservation);
             if (response.acknowledged)
                 {
@@ -58,6 +60,7 @@ const getAll = async (req ,res )=>
                 if (response.modifiedCount > 0)
                     {
                         res.status(204).send();
+
                     }
                 else{
                     res.status(500).json(response.error || 'Some error ocurred while updating the reservation')

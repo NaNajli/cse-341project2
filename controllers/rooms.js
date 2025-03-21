@@ -25,8 +25,8 @@ const getAll = async (req ,res )=>
             })};
 
     const createRooms = async(req ,res )=>
-        {   // #swagger.tags =['Rooms']  
-            const room = {               
+        {   // #swagger.tags =['Rooms']
+           const room = {               
            room : req.body.room,
            persons : req.body.persons,
            description: req.body.description,

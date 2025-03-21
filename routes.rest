@@ -1,0 +1,61 @@
+GET http://localhost:3000/rooms
+
+###
+
+POST http://localhost:3000/rooms 
+
+{
+    "room": "Standard Doubles",
+    "persons": "2",
+    "description": "Comfortable room with two single beds.",
+    "price": "250",
+    "check_in": "2024-10-28T23:00:00Z",
+    "check_out": "2024-10-30T13:00:00Z"
+ 
+}
+###
+
+PUT http://localhost:3000/rooms/67d981e2c70b7e7a8a04e1be
+{
+ "room": "Standard Double",
+ "persons": "2",
+ "description": "Comfortable room with two single beds.",
+ "price": "290",
+
+}
+###
+
+DELETE http://localhost:3000/rooms/67dad7d916fd71a182ba24fd
+
+###
+
+GET http://localhost:3000/reservations
+
+###
+
+POST http://localhost:3000/reservations
+
+{
+    "first_name":"Rosa" ,
+    "last_name": "Pérez"
+  },
+###
+
+PUT http://localhost:3000/reservations/67dc18231089cbf129207b58
+
+{
+  "reservation_id": "RES-20241029-004",
+  "reservation_date": "2024-10-29T09:00:00Z",
+  "first_name": "Ana",
+  "last_name": "López"
+    
+  },
+
+###
+DELETE  http://localhost:3000/reservations/67dcc28f3978ce62a5cc2e4a
+
+
+
+
+
+
