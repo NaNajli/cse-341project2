@@ -6,7 +6,7 @@ const doc = {
         title:'Rooms and reservations Api',
         description:'Rooms and reservations Api'
     },
-    host:'localhost:3000',
+    host:'https://cse-341project2-sy5s.onrender.com/',
     schemes :['https', 'http']
 }
 
