@@ -5,11 +5,10 @@
     "description": "Rooms and reservations Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "https://cse-341project2-sy5s.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
-    "https"
+    "https" 
   ],
   "paths": {
     "/": {
