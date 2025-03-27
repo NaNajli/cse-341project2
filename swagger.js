@@ -7,7 +7,7 @@ const doc = {
         description:'Rooms and reservations Api'
     },
     host:'localhost:3000',
-    schemes :['https', 'http']
+    schemes :['http', 'https']
 }
 
 const outpustFile = './swagger.json';
