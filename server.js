@@ -18,7 +18,7 @@ app
 //
 //}))
 
-app.use(session({
+.use(session({
     secret: 'secret', // ¡Cambia esto!
     resave: false,
     saveUninitialized: true,
