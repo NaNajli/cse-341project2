@@ -19,18 +19,13 @@ app
 //}))
 
 .use(session({
-    secret: 'secret', // ¡Cambia esto!
+    secret: 'secret', 
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({
         mongoUrl: process.env.MONGODB_URI,
         ttl: 24 * 60 * 60, // 24 horas
     }),
-    cookie: {
-        secure: process.env.NODE_ENV === 'production',
-        httpOnly: true,
-        maxAge: 1000 * 60 * 60 * 24, // 24 horas
-    },
 }))
 // This is the basic express session({...})initialization
 .use(passport.initialize())
